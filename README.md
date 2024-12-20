@@ -1,70 +1,128 @@
-# Getting Started with Create React App
+# Andreas-Ink-Web-Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the repository for my personal web portfolio, showcasing my work as an iOS engineer, college student, and founder.
 
-## Available Scripts
+![image](https://github.com/user-attachments/assets/c81b1414-1b56-4429-a2be-633bec18d227)
+![image](https://github.com/user-attachments/assets/49f43602-b383-413f-a861-6b02c69880ba)
 
-In the project directory, you can run:
+## Overview
 
-### `npm start`
+This project is a responsive website designed to highlight my professional experience, projects, and skills in iOS development and entrepreneurship.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Home Page**: Provides an introduction and overview.
+- **Projects Section**: Showcases selected iOS applications and development work.
+- **Skills Section**: Details technical proficiencies and tools utilized.
+- **Configurable Timeline**: Customize the timeline of years, projects, and experiences to suit your needs.
 
-### `npm test`
+## Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- HTML
+- CSS
+- JavaScript
+- Next.js
+- TailwindCSS
+- Aceternity UI
 
-### `npm run build`
+## Customization
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This portfolio is designed to be fully customizable. To tailor it for your own use:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Edit the Configuration**: 
+   Update the `config` object in the `/data/config.json` file to reflect your information, including name, bio, work details, and timeline content.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```javascript
+   const config = {
+       developer: {
+           name: "Your Name",
+           bio: "Your Bio",
+           work: "Your Work Details"
+       },
+       years: [
+           {
+               year: 2020,
+               content: [
+                   {
+                       type: "text",
+                       content: "Custom text for this year."
+                   },
+                   // Add more items as needed
+               ]
+           }
+       ]
+   };
+   ```
 
-### `npm run eject`
+2. **Update Item Types**: 
+   Modify the `item type` switch in the `src/App.js` file to include new item types if needed. 
+   This allows you to define custom displays for new sections or features.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. **Update the projects in `AppsView.js`**
+    Update `const data` in `AppsView.js` so that your projects show as expected
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. **Update the impacts you've made in `ImpactView.js` and `ImapctView2.js` `etc`**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+5. **Update the metadata**
+    Modify the SEO data in `layout.tsx`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+6. **Package.json**: 
+   The project uses the following scripts and dependencies. Ensure these are installed for smooth operation:
 
-## Learn More
+   ```json
+   {
+       "name": "resume-app",
+       "version": "0.1.0",
+       "scripts": {
+           "dev": "next dev",
+           "build": "next build",
+           "start": "next start",
+           "lint": "next lint"
+       },
+       "dependencies": {
+           "next": "14.2.7",
+           "react": "^18",
+           "styled-components": "^6.1.13",
+           "tailwindcss": "^3.4.10"
+       }
+   }
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Getting Started
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To view or modify the portfolio locally:
 
-### Code Splitting
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/AndreasInk/Andreas-Ink-Web-Portfolio.git
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. **Navigate to the project directory**:
+   ```bash
+   cd Andreas-Ink-Web-Portfolio
+   ```
 
-### Analyzing the Bundle Size
+3. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+4. **Run the development server**:
+   ```bash
+   npm run dev
+   ```
 
-### Making a Progressive Web App
+5. **Open the app in your browser**:
+   Visit `http://localhost:3000` to view the portfolio.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Contributing
 
-### Advanced Configuration
+Contributions are welcome! If you have suggestions or improvements, please open an issue or submit a pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## License
 
-### Deployment
+This project is licensed under the MIT License.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Contact
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For inquiries, please reach out via the contact form on the website or through [my GitHub profile](https://github.com/AndreasInk).
